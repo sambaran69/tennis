@@ -100,7 +100,7 @@ Game.prototype.score = function() {
         if (p1points == p2points)
             return "Deuce";
         leading = (p1points > p2points) ? this.player1 : this.player2;
-        if (this.isGameOver() === true) {
+        if (this.isGameOver()) {
             leading.wonAGame();
             this.match.nextGame();
             return "Win for " + leading.name;
